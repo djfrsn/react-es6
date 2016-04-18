@@ -42,7 +42,8 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'babel',
       query: {
-        "presets": ["es2015", "stage-0", "react"]
+        plugins: ['transform-decorators-legacy'],
+        presets: ["es2015", "stage-0", "react"]
       }
     }, {
       test: /\.((woff2?|svg)(\?v=[0-9]\.[0-9]\.[0-9]))|(woff2?|svg|jpe?g|png|gif|ico)$/, loader: 'url-loader?limit=10000'
